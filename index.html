@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portal de Cursos de Extensão</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="container cabecalho">
+      <a class="logo" href="#inicio">Portal de Cursos</a>
+
+      <nav aria-label="Menu principal">
+        <a href="#cursos">Cursos</a>
+        <a href="#inscricao">Inscrição</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="apresentacao container">
+      <span class="etiqueta">Cursos de extensão</span>
+      <h1>Aprenda novas habilidades em tecnologia</h1>
+      <p>
+        Conheça nossos cursos, consulte os horários e escolha
+        uma opção para começar.
+      </p>
+      <a class="botao" href="#cursos">Conhecer os cursos</a>
+    </section>
+
+    <section id="cursos" class="container secao">
+      <h2>Cursos disponíveis</h2>
+      <p>Todos os cursos são gratuitos e destinados a iniciantes.</p>
+
+      <div class="grade">
+        <article class="card">
+          <span class="categoria">Programação</span>
+          <h3>Introdução ao Python</h3>
+          <p>
+            Aprenda variáveis, condições e repetições
+            com exercícios de lógica de programação.
+          </p>
+
+          <dl>
+            <dt>Modalidade</dt>
+            <dd>On-line</dd>
+            <dt>Horário</dt>
+            <dd>Segundas e quartas, das 19h às 21h</dd>
+            <dt>Carga horária</dt>
+            <dd>20 horas</dd>
+          </dl>
+
+          <button
+            type="button"
+            class="botao escolher"
+            data-curso="python"
+            aria-label="Inscrever-se em Introdução ao Python">
+            Inscrever-se
+          </button>
+        </article>
+
+        <article class="card">
+          <span class="categoria">Desenvolvimento web</span>
+          <h3>HTML e CSS na Prática</h3>
+          <p>
+            Construa páginas web e aprenda a organizar
+            conteúdos, cores e layouts.
+          </p>
+
+          <dl>
+            <dt>Modalidade</dt>
+            <dd>On-line</dd>
+            <dt>Horário</dt>
+            <dd>Terças e quintas, das 18h às 20h</dd>
+            <dt>Carga horária</dt>
+            <dd>24 horas</dd>
+          </dl>
+
+          <button
+            type="button"
+            class="botao escolher"
+            data-curso="web"
+            aria-label="Inscrever-se em HTML e CSS na Prática">
+            Inscrever-se
+          </button>
+        </article>
+
+        <article class="card">
+          <span class="categoria">Infraestrutura</span>
+          <h3>Fundamentos de Redes</h3>
+          <p>
+            Entenda endereços IP, equipamentos e os
+            princípios da comunicação entre computadores.
+          </p>
+
+          <dl>
+            <dt>Modalidade</dt>
+            <dd>Presencial</dd>
+            <dt>Horário</dt>
+            <dd>Sábados, das 9h às 12h</dd>
+            <dt>Carga horária</dt>
+            <dd>18 horas</dd>
+          </dl>
+
+          <button
+            type="button"
+            class="botao escolher"
+            data-curso="redes"
+            aria-label="Inscrever-se em Fundamentos de Redes">
+            Inscrever-se
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <section id="inscricao" class="container secao">
+      <div class="painel">
+        <h2>Faça sua inscrição</h2>
+        <p id="aviso">
+          Demonstração acadêmica: utilize um nome fictício.
+          Os cursos e a inscrição são simulados.
+        </p>
+
+        <form id="formulario" aria-describedby="aviso">
+          <label for="nome">Nome fictício</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Ex.: Aluno Teste"
+            maxlength="60"
+            autocomplete="off"
+            required>
+
+          <label for="curso">Curso desejado</label>
+          <select id="curso" name="curso" required>
+            <option value="">Selecione um curso</option>
+            <option value="python">Introdução ao Python</option>
+            <option value="web">HTML e CSS na Prática</option>
+            <option value="redes">Fundamentos de Redes</option>
+          </select>
+
+          <button type="submit" class="botao">
+            Confirmar inscrição simulada
+          </button>
+        </form>
+
+        <p id="resultado" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="duvidas" class="container secao">
+      <h2>Dúvidas frequentes</h2>
+
+      <details>
+        <summary>Preciso ter experiência?</summary>
+        <p>Não. Os conteúdos apresentados são voltados a iniciantes.</p>
+      </details>
+
+      <details>
+        <summary>Os cursos têm algum custo?</summary>
+        <p>Não. Neste portal demonstrativo, todos são gratuitos.</p>
+      </details>
+
+      <details>
+        <summary>Esta inscrição é real?</summary>
+        <p>
+          Não. Esta página foi criada para uma atividade acadêmica
+          de avaliação da qualidade de software.
+        </p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <p>Portal de Cursos — Projeto acadêmico de Qualidade e Teste de Software.</p>
+    <p>Cursos fictícios. Nenhuma matrícula real será realizada.</p>
+  </footer>
+</body>
+</html>
